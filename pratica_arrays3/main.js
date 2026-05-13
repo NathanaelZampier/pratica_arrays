@@ -83,46 +83,116 @@
 // console.log(existe)
 
 
-const usuarios = [
-    {nome: 'nathan', idade: 20},
-    {nome: 'lucas', idade: 18},
-    {nome: 'ana', idade: 25}
+// const usuarios = [
+//     {nome: 'nathan', idade: 20},
+//     {nome: 'lucas', idade: 18},
+//     {nome: 'ana', idade: 25}
+// ]
+
+// console.log(usuarios)
+
+// for(let dados of usuarios) {
+//     console.log(dados.nome)
+//     console.log(dados.idade)
+// }
+
+// for(let dados of usuarios) {
+//     if(dados.idade >= 18) {
+//         console.log(dados)
+//     }
+// }
+
+// usuarios.push({nome: 'marcos', idade: 30})
+
+// console.log(usuarios)
+
+// for(let dados of usuarios) {
+//     if(dados.nome === 'ana') {
+//         console.log('existe')
+//     }
+// }
+
+// let contador = 0
+
+// for(let dados of usuarios) {
+//     if(dados.idade >= 20) {
+//         contador++
+//     }
+// }
+
+// console.log(contador)
+
+
+// usuarios.splice(1,1)
+
+// console.log(usuarios)
+
+// const usuarios = [
+//     {nome: 'nathan', idade: 20},
+//     {nome: 'lucas', idade:18},
+//     {nome: 'ana', idade: 25},
+// ]
+
+
+
+// let contador = 0
+
+// for(let dados of usuarios) {
+//     if(dados.nome === 'lucas') {
+//         dados.idade = 19
+//     }
+
+//     if(dados.nome === 'ana') {
+//         dados.nome = 'ana clara'
+//     }
+
+//     if(dados.idade >= 18) {
+//         contador++
+//     }
+// }
+
+// console.log(usuarios)
+// console.log(contador)
+
+const tarefas = [
+    {nome: 'estudar js', concluida: false},
+    {nome : 'treinar', concluida: true},
+    {nome: 'ler um livro', concluida: false}
 ]
 
-console.log(usuarios)
+console.log(tarefas);
 
-for(let dados of usuarios) {
+for(let dados of tarefas) {
     console.log(dados.nome)
-    console.log(dados.idade)
+    console.log(dados.concluida)
 }
 
-for(let dados of usuarios) {
-    if(dados.idade >= 18) {
+for(let dados of tarefas) {
+    if(dados.concluida) {
         console.log(dados)
-    }
-}
-
-usuarios.push({nome: 'marcos', idade: 30})
-
-console.log(usuarios)
-
-for(let dados of usuarios) {
-    if(dados.nome === 'ana') {
-        console.log('existe')
     }
 }
 
 let contador = 0
 
-for(let dados of usuarios) {
-    if(dados.idade >= 20) {
+for(let dados of tarefas) {
+    if(dados.concluida === false) {
         contador++
     }
 }
 
 console.log(contador)
 
+tarefas.push({nome: 'Estudar arrays', concluida: false})
 
-usuarios.splice(1,1)
+console.log(tarefas)
 
-console.log(usuarios)
+for(let dados of tarefas) {
+    if(dados.nome === 'ler um livro') {
+        dados.concluida = true
+    }
+}
+
+tarefas.splice(1,1)
+
+
