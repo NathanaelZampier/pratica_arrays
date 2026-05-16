@@ -272,58 +272,59 @@
 // console.log(contador)
 
 
-const produtos = [
-    {nome: 'mouse', preco: 120, estoque: 10},
-    {nome: 'teclado', preco: 250, estoque: 5},
-    {nome: 'monitor', preco: 900, estoque: 2},
-]
+// const produtos = [
+//     {nome: 'mouse', preco: 120, estoque: 10},
+//     {nome: 'teclado', preco: 250, estoque: 5},
+//     {nome: 'monitor', preco: 900, estoque: 2},
+// ]
 
-console.log(produtos)
+// console.log(produtos)
 
-for(let dados of produtos) {
-    console.log(dados.nome)
-    console.log(dados.preco)
-    console.log(dados.estoque)
-}
+// for(let dados of produtos) {
+//     console.log(dados.nome)
+//     console.log(dados.preco)
+//     console.log(dados.estoque)
+// }
 
-for(let dados of produtos) {
-    if(dados.estoque < 6) {
-        console.log(dados)
-    }
-}
+// for(let dados of produtos) {
+//     if(dados.estoque < 6) {
+//         console.log(dados)
+//     }
+// }
 
-for(let dados of produtos) {
-    if(dados.preco < 200) {
-        console.log(dados)
-    }
-}
+// for(let dados of produtos) {
+//     if(dados.preco < 200) {
+//         console.log(dados)
+//     }
+// }
 
-produtos.push({nome: 'headset', preco: 180, estoque: 8})
+// produtos.push({nome: 'headset', preco: 180, estoque: 8})
 
-console.log(produtos)
+// console.log(produtos)
 
-for(let dados of produtos) {
-    if(dados.nome === 'monitor') {
-        dados.estoque = 7
-    }
-}
+// for(let dados of produtos) {
+//     if(dados.nome === 'monitor') {
+//         dados.estoque = 7
+//     }
+// }
 
-produtos.splice(1,1)
+// produtos.splice(1,1)
 
-let contador = 0
+// let contador = 0
 
-for(let dados of produtos) {
-    if(dados.estoque > 5) {
-        contador++
-    }
-}
+// for(let dados of produtos) {
+//     if(dados.estoque > 5) {
+//         contador++
+//     }
+// }
 
-console.log(contador)
+// console.log(contador)
 
-let soma = 0
+// let soma = 0
 
-for(let dados of produtos) {
-    soma += dados.preco * dados.estoque
-}
+// for(let dados of produtos) {
+//     soma += dados.preco * dados.estoque
+// }
 
-console.log(soma)
+// console.log(soma)
+
