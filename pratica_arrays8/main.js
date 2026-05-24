@@ -394,104 +394,215 @@
 // console.log('segundo menor: ' + segundoMenorPlacar)
 
 
-const jogadores = [
-    {nome: 'Nathan', pontos: 450},
-    {nome: 'Lucas', pontos: 120},
-    {nome: 'Ana', pontos: 700},
-    {nome: 'Marina', pontos:300},
-    {nome: 'Carlos', pontos:900},
-    {nome:'Fernanda', pontos:250}
+// const jogadores = [
+//     {nome: 'Nathan', pontos: 450},
+//     {nome: 'Lucas', pontos: 120},
+//     {nome: 'Ana', pontos: 700},
+//     {nome: 'Marina', pontos:300},
+//     {nome: 'Carlos', pontos:900},
+//     {nome:'Fernanda', pontos:250}
+// ]
+
+// for(let dados of jogadores) {
+//     console.log(dados.nome + ' ' + dados.pontos)
+// }
+
+// let jogadorComMaiorPontuacao = jogadores[0]
+
+// for(let dados of jogadores) {
+//     if(dados.pontos > jogadorComMaiorPontuacao.pontos) {
+//         jogadorComMaiorPontuacao = dados
+//     }
+// }
+
+// console.log(jogadorComMaiorPontuacao)
+
+// let jogadorComMenorPontuacao = jogadores[0]
+
+// for(let dados of jogadores) {
+//     if(dados.pontos < jogadorComMenorPontuacao.pontos) {
+//         jogadorComMenorPontuacao = dados
+//     }
+// }
+
+// console.log(jogadorComMenorPontuacao)
+
+// let jogadorComSegundaMaiorPontuacao = jogadores[0]
+
+// for(let dados of jogadores) {
+//     if(dados.pontos > jogadorComSegundaMaiorPontuacao.pontos && dados.pontos !== jogadorComMaiorPontuacao.pontos) {
+//         jogadorComSegundaMaiorPontuacao = dados
+//     }
+// }
+
+// console.log(jogadorComSegundaMaiorPontuacao)
+
+// let jogadorComSegundaMenorPontuacao = jogadores[0]
+
+// for(let dados of jogadores) {
+//     if(dados.pontos < jogadorComSegundaMenorPontuacao.pontos && dados.pontos !== jogadorComMenorPontuacao.pontos) {
+//         jogadorComSegundaMenorPontuacao = dados
+//     }
+// }
+
+// console.log(jogadorComSegundaMenorPontuacao)
+
+// for(let dados of jogadores) {
+//     if(dados.pontos > 400) {
+//         console.log(dados)
+//     }
+// }
+
+// for(let dados of jogadores) {
+//     if(dados.pontos < 300) {
+//         console.log(dados)
+//     }
+// }
+
+// let somaTotal = 0
+
+// for(let dados of jogadores) {
+//     somaTotal +=dados.pontos 
+// }
+
+// console.log(somaTotal)
+
+// console.log(jogadores)
+
+// let media = somaTotal / 6
+
+// console.log(media)
+
+// jogadores.sort((a,b) => a.pontos -b.pontos)
+
+// console.log(jogadores)
+
+// jogadores.sort((a,b) => b.pontos -a.pontos)
+
+// console.log(jogadores)
+
+// jogadores.sort((a,b) => a.nome.localeCompare(b.nome))
+
+// console.log(jogadores)
+
+// for(let i = 0; i < jogadores.length; i ++) {
+//     console.log(i + ' ' + jogadores[i].nome + ' ' + jogadores[i].pontos)
+// }
+
+// const nomes = []
+
+// for(let dados of jogadores) {
+//     nomes.push(dados.nome)
+// }
+
+// console.log(nomes)
+
+// console.log(nomes.join(' | '))
+
+
+//     console.log('maior jogador: ' + jogadorComMaiorPontuacao.nome + ' ' + jogadorComMaiorPontuacao.pontos)
+//     console.log('segundo maior: ' + jogadorComSegundaMaiorPontuacao.nome + ' ' + jogadorComSegundaMaiorPontuacao.pontos)
+//     console.log('menor jogador: ' + jogadorComMenorPontuacao.nome + ' ' + jogadorComSegundaMaiorPontuacao.pontos)
+//     console.log('segundo menor: ' + jogadorComSegundaMenorPontuacao.nome + ' ' + jogadorComSegundaMenorPontuacao.pontos) 
+
+
+const jogos = [
+    {nome: 'God of war', preco:200, estoque: 5},
+    {nome: 'minecraft', preco:120, estoque: 10},
+    {nome:'FIFA', preco:300, estoque:3},
+    {nome:'GTA V', preco:150, estoque: 8} 
 ]
 
-for(let dados of jogadores) {
-    console.log(dados.nome + ' ' + dados.pontos)
+for(let i = 0; i < jogos.length; i ++) {
+    console.log(jogos[i].nome + ' ' + jogos[i].preco + ' ' + jogos[i].estoque) 
 }
+jogos.push({nome:'Valorant', preco:0, estoque:999})
 
-let jogadorComMaiorPontuacao = jogadores[0]
+console.log(jogos)
 
-for(let dados of jogadores) {
-    if(dados.pontos > jogadorComMaiorPontuacao.pontos) {
-        jogadorComMaiorPontuacao = dados
+jogos.pop()
+
+console.log(jogos)
+
+jogos.splice(0,0,{nome:'The witcher 3', preco:180, estoque:4})
+
+console.log(jogos)
+
+jogos.splice(0,1)
+
+console.log(jogos)
+
+for(let i = 0; i < jogos.length; i ++) {
+    if(jogos[i].nome === 'minecraft') {
+        console.log(i)
     }
 }
 
-console.log(jogadorComMaiorPontuacao)
+console.log(jogos)
 
-let jogadorComMenorPontuacao = jogadores[0]
+jogos.splice(2, 1, {nome:'EA FC 26', preco:350, estoque:6})
 
-for(let dados of jogadores) {
-    if(dados.pontos < jogadorComMenorPontuacao.pontos) {
-        jogadorComMenorPontuacao = dados
+let jogoMaisCaro = jogos[0]
+
+for(let i = 0; i < jogos.length; i ++) {
+    if(jogos[i].preco > jogoMaisCaro.preco) {
+        jogoMaisCaro = jogos[i]
     }
 }
 
-console.log(jogadorComMenorPontuacao)
+console.log(jogoMaisCaro)
 
-let jogadorComSegundaMaiorPontuacao = jogadores[0]
+let jogoMaisBarato = jogos[0]
 
-for(let dados of jogadores) {
-    if(dados.pontos > jogadorComSegundaMaiorPontuacao.pontos && dados.pontos !== jogadorComMaiorPontuacao.pontos) {
-        jogadorComSegundaMaiorPontuacao = dados
+for(let i = 0; i < jogos.length; i ++) {
+    if(jogos[i].preco < jogoMaisBarato.preco) {
+        jogoMaisBarato = jogos[i]
     }
 }
 
-console.log(jogadorComSegundaMaiorPontuacao)
+console.log(jogoMaisBarato)
 
-let jogadorComSegundaMenorPontuacao = jogadores[0]
-
-for(let dados of jogadores) {
-    if(dados.pontos < jogadorComSegundaMenorPontuacao.pontos && dados.pontos !== jogadorComMenorPontuacao.pontos) {
-        jogadorComSegundaMenorPontuacao = dados
+for(let i = 0; i < jogos.length; i++) {
+    if(jogos[i].preco > 150) {
+        console.log(jogos[i])
     }
-}
 
-console.log(jogadorComSegundaMenorPontuacao)
-
-for(let dados of jogadores) {
-    if(dados.pontos > 400) {
-        console.log(dados)
-    }
-}
-
-for(let dados of jogadores) {
-    if(dados.pontos < 300) {
-        console.log(dados)
+    if(jogos[i].estoque < 5) {
+        console.log(jogos[i])
     }
 }
 
 let somaTotal = 0
 
-for(let dados of jogadores) {
-    somaTotal +=dados.pontos 
+for(let i = 0; i < jogos.length; i++) {
+    somaTotal += jogos[i].preco
 }
 
 console.log(somaTotal)
 
-console.log(jogadores)
-
-let media = somaTotal / 6
+let media = somaTotal / 4
 
 console.log(media)
 
-jogadores.sort((a,b) => a.pontos -b.pontos)
+jogos.sort((a,b) => a.preco -b.preco)
 
-console.log(jogadores)
+console.log(jogos)
 
-jogadores.sort((a,b) => b.pontos -a.pontos)
+jogos.sort((a,b) => b.preco -a.preco)
 
-console.log(jogadores)
+console.log(jogos)
 
-jogadores.sort((a,b) => a.nome.localeCompare(b.nome))
+jogos.sort((a,b) => a.nome.localeCompare(b.nome))
 
-console.log(jogadores)
+console.log(jogos)
 
-for(let i = 0; i < jogadores.length; i ++) {
-    console.log(i + ' ' + jogadores[i].nome + ' ' + jogadores[i].pontos)
+for(let i = 0; i < jogos.length; i ++) {
+    console.log(i + ' ' + jogos[i].nome + ' ' + jogos[i].preco)
 }
 
 const nomes = []
 
-for(let dados of jogadores) {
+for(dados of jogos) {
     nomes.push(dados.nome)
 }
 
@@ -499,11 +610,14 @@ console.log(nomes)
 
 console.log(nomes.join(' | '))
 
+let diferença = jogoMaisCaro.preco - jogoMaisBarato.preco
 
-    console.log('maior jogador: ' + jogadorComMaiorPontuacao.nome + ' ' + jogadorComMaiorPontuacao.pontos)
-    console.log('segundo maior: ' + jogadorComSegundaMaiorPontuacao.nome + ' ' + jogadorComSegundaMaiorPontuacao.pontos)
-    console.log('menor jogador: ' + jogadorComMenorPontuacao.nome + ' ' + jogadorComSegundaMaiorPontuacao.pontos)
-    console.log('segundo menor: ' + jogadorComSegundaMenorPontuacao.nome + ' ' + jogadorComSegundaMenorPontuacao.pontos) 
+
+console.log('jogos mais caro: ' + jogoMaisCaro.nome + ' ' + jogoMaisCaro.preco)
+console.log('jogos mais barato: ' + jogoMaisBarato.nome + ' ' + jogoMaisBarato.preco)
+console.log(diferença)
+
+
 
 
 
